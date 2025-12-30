@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Arithmétique Interactif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧮 Calculateur Arithmétique</h1>
+            <p>Saisissez deux nombres pour obtenir les résultats des opérations de base</p>
+        </header>
+
+        <main class="calculator">
+            <!-- Zone de saisie -->
+            <section class="input-section">
+                <div class="input-group">
+                    <label for="nombre1">Nombre 1 :</label>
+                    <input type="number" id="nombre1" step="any" placeholder="0" required>
+                    <span class="error-message" id="error-nombre1"></span>
+                </div>
+
+                <div class="input-group">
+                    <label for="nombre2">Nombre 2 :</label>
+                    <input type="number" id="nombre2" step="any" placeholder="0" required>
+                    <span class="error-message" id="error-nombre2"></span>
+                </div>
+
+                <button id="calculerBtn" class="calculer-btn">
+                    Calculer ➤
+                </button>
+            </section>
+
+            <!-- Zone des résultats -->
+            <section class="results-section" id="resultatsSection">
+                <h2>Résultats des calculs :</h2>
+                <div class="resultats-grid">
+                    <div class="resultat-item">
+                        <span class="operation">Somme</span>
+                        <span class="resultat" id="somme">-</span>
+                    </div>
+                    <div class="resultat-item">
+                        <span class="operation">Différence</span>
+                        <span class="resultat" id="difference">-</span>
+                    </div>
+                    <div class="resultat-item">
+                        <span class="operation">Produit</span>
+                        <span class="resultat" id="produit">-</span>
+                    </div>
+                    <div class="resultat-item">
+                        <span class="operation">Quotient</span>
+                        <span class="resultat" id="quotient">-</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Message d'erreur global -->
+            <div class="error-global" id="errorGlobal" role="alert"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
